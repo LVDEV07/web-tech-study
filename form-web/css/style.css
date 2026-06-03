@@ -1,24 +1,72 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 body{
-    background-color: lightseagreen;
+    background-color: mediumturquoise;
 }
 
 .container{
     width: 100%;
     max-width: 1000px;
-    border: 1px solid;
+    
+    margin: 0 auto;
+    background-color: white;
 }
 
 header{
     height: 100px;
-    background-color:mediumturquoise;
+    background-color:lightseagreen;
 }
 
 header h1{
     font-size: 35px;
     color: aliceblue;
     padding: 25px;
+}
+
+.content{
+    max-width: 400px;
+    border: 1px solid lightseagreen;
+    margin: auto;
+    margin-top:20px;
+    margin-bottom: 20px;;
+}
+
+.headerCad{
+    height: 80px;
+    background-color: rgb(19, 109, 104);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerCad h1{
+    color: white;
+    font-size: 25px;
+    
+}
+
+.form-group, .form-button{
+    margin: 10px;
+}
+
+.form-group label{
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.form-group input[type = "text"]{
+    border: 2px solid lightseagreen;
+    width: 95%;
+    height: 25px;
+    outline: none;
+    padding-left: 5px;
+}
+
+.form-button button{
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
 }
