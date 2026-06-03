@@ -5,3 +5,20 @@
 body{
     background-color: lightseagreen;
 }
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid;
+}
+
+header{
+    height: 100px;
+    background-color:mediumturquoise;
+}
+
+header h1{
+    font-size: 35px;
+    color: aliceblue;
+    padding: 25px;
+}
