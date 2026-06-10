@@ -1,7 +1,7 @@
 //Variaveis
 const inputNota = document.getElementById("nota");
 const resultado = document.getElementById("resultado");
-
+const message = document.getElementById("message")
 
 
 function resultadoNotaClick(event) {
@@ -10,19 +10,20 @@ function resultadoNotaClick(event) {
 
 
     if (nota == "") {
-        alert("É necessário inserir um valor")
+        message.style.display = "block"
 
         return false
     }
 
 
     if (nota >= 6) {
-        alert("Aprovado");
+        resultado.innerHTML = "Aprovado";
     }
     else {
-        alert("Reprovado")
+        resultado.innerHTML = "Reprovado"
     }
 
+    inputNota.value = ""
 
 }
 
