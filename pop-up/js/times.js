@@ -1,3 +1,3 @@
 let times= ["Bangu", "Paulista", "Botafogo"]
 
-console.table(times)
+console.table(times.includes("Bangu"))
