@@ -2,6 +2,7 @@
 const inputNota = document.getElementById("nota");
 const resultado = document.getElementById("resultado");
 const message = document.getElementById("message")
+const nome = document.getElementById("nome")
 
 
 function resultadoNotaClick(event) {
@@ -17,10 +18,10 @@ function resultadoNotaClick(event) {
 
 
     if (nota >= 6) {
-        resultado.innerHTML = "Aprovado";
+        resultado.innerHTML = `${nome.value} você está reprovado`;
     }
     else {
-        resultado.innerHTML = "Reprovado"
+        resultado.innerHTML = `${nome.value} você está reprovado`
     }
 
     inputNota.value = ""
