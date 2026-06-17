@@ -1,6 +1,8 @@
 //alert("Pop up")
 const button = document.querySelector("button")
 const popup = document.querySelector(".popup-wrapper")
+const popupLink = document.querySelector(".popup-link")
+const CorFundo = document.querySelector("body")
 
 button.addEventListener("click", function(event){
     popup.classList.add("d-block")
@@ -9,11 +11,16 @@ button.addEventListener("click", function(event){
 popup.addEventListener("click", function(event){
     const classOfClickElement = event.target.classList[0]
 
-    const classNameListArray = ["popup-close", "popup-link", "popup-wrapper"]
+    const classNameListArray = ["popup-close", "popup-wrapper"]
 
     
 
     if(classNameListArray.includes(classOfClickElement)){
         popup.classList.remove("d-block")
     }
+})
+
+
+popupLink.addEventListener("click", function(event){
+    CorFundo.classList.add("dark")
 })
