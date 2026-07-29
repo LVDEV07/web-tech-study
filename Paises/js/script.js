@@ -9,4 +9,6 @@ const paises = ["Brasil", "Argentina", "França", "Alemanha", "Japão", "Portuga
         for(let i=0; i<paises.length; i++){
         lista.innerHTML += "<li>" + paises[i] + "</i>"
         }
+
+        lista.innerHTML += "Quantidade de países: " + (paises.length)
     }
