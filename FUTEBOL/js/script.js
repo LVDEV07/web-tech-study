@@ -13,5 +13,12 @@ const jogadores = [
     console.log(jogadores)
 
     function listarJogadores(){
-        alert("teste")
+        
+        let lista = document.getElementById("listaJogadores")
+
+        lista.innerHTML = ""
+
+        for(let i=0; i<jogadores.length; i++){
+        lista.innerHTML += "<li>" + jogadores[i] + "</i>"
+        }
     }
