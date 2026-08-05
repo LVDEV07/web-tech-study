@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventod JavaScript</title>
+</head>
+<body>
+    <h1>Eventos JavaScript</h1>
+
+     <button class="item">clique aqui</button> <br>
+     <button class="item">clique aqui</button> <br>
+     <button class="item">clique aqui</button> <br>
+     <button class="item">clique aqui</button> <br>
+     <button class="item">clique aqui</button> <br>
+    
+    <Script>
+        const botoes = document.querySelectorAll(".item")
+
+        for (let i = 0; i < botoes.length; i++){
+            botoes[i].addEventListener('click', clicar)
+        }
+
+        function clicar(){
+            console.log("clicou")
+        }
+    </Script>
+
+</body>
+</html>
