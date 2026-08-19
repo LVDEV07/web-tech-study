@@ -1,4 +1,4 @@
-const Header = (props) => {
+const Footer = (props) => {
 
     const headerStyle = {
         background: '#BEBEBE',
@@ -21,4 +21,4 @@ const Header = (props) => {
 
 }
 
-export default Header;
+export default Footer;
