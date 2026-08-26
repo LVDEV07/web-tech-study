@@ -1,8 +1,8 @@
 import Header from "./Components/Header"
-import Card from "./Components/card"
+import Card from "./Components/Card"
 import Footer from "./Components/Footer"
-import Banner from "./Components/Banner"
-import Img from "./Components/Img"
+import Banner from "./Components/Banner/Banner"
+import Img from "./Components/ImgCard"
 import Anuncio from "./Components/Anuncio"
 
 

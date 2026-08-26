@@ -4,9 +4,9 @@ const Card = (props) =>{
 
     return(
         <section>
-      <article className="card">
+      <article className="card-anuncio">
         <h1>{props.title}</h1>
-        <img src={props.url} className="img-card"/>
+        <img src={props.url} className="img-card-anuncio"/>
 
         <>
             {props.children}  
