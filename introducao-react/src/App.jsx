@@ -4,21 +4,31 @@ import Footer from "./Components/Footer"
 import Banner from "./Components/Banner/Banner"
 import Img from "./Components/ImgCard"
 import Anuncio from "./Components/Anuncio"
-
-
+import Count from "./Components/count"
+import Box from "./Components/Box"
+import Piloto from "./Components/Pilotos"
 function App() {
 
 
   return (
     <>
+    <h1>Campeões mundiais de f1 1950-1960</h1>
+    
+    <Piloto/>
+
+    <hr />
+
+
+
+
+    <Count/>
     <Header title = "Meu site"/>
-    <Header title = "lorem ipsum"/>
-    <Header title = "Introdução react"/>
     <Banner>
 
       <h1>Bem vindo ao meu site</h1>
       <h2>Aqui você encontra as melhores ofertas</h2>
 
+    <Box/>    
     </Banner>
     <Card/>
     <Img caption = "Cachorro" />
