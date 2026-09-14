@@ -14,6 +14,11 @@ export default function index() {
                         Sobre
                     </Link>
                 </li>
+                <li>
+                    <Link to="/faq">
+                        FAQ
+                    </Link>
+                </li>
             </ul>
         </nav>
     )
