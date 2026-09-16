@@ -18,6 +18,13 @@ export default function index() {
                     <Link to="/faq">
                         FAQ
                     </Link>
+
+                </li>
+                <li>
+
+                    <Link to="/usuarios">
+                        Usuarios
+                    </Link>
                 </li>
             </ul>
         </nav>

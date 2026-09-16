@@ -1,14 +1,19 @@
 details {
     margin-top: 15px;
     padding: 10px;
+
 }
 
 .conteudo {
     padding: 20px;
     margin: 0 auto;
+
+
+
 }
 
 summary {
+
     padding-bottom: 10px;
     font-weight: bold;
     cursor: pointer;
