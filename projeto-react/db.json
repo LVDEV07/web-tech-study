@@ -1,8 +1,8 @@
 {
   "usuarios": [
-     { "nome": "João Silva", "telefone": "11999990001", "email":"João@gmail.com" },
-     { "nome": "Caio", "telefone": "44444444" , "email":"Caio@gmail.com"  },
-     { "nome": "Gustavo", "telefone": "33333333" , "email":"Gustavo@gmail.com"  }
+    { "nome": "João Silva", "telefone": "11999990001", "email": "João@gmail.com" },
+    { "nome": "Caio", "telefone": "44444444", "email": "Caio@gmail.com" },
+    { "nome": "Gustavo", "telefone": "33333333", "email": "Gustavo@gmail.com" }
   ],
   "faq": [
     {
@@ -20,5 +20,37 @@
       "pergunta": "Posso usar JSON Server em produção?",
       "resposta": "JSON Server é ótimo para desenvolvimento ..."
     }
-  ]
+  ],
+  "sobre": [
+  {
+    "id": "1",
+    "titulo": "Quem somos",
+    "texto": "Somos uma equipe apaixonada por tecnologia, criando soluções simples e eficientes para facilitar o dia a dia dos nossos usuários."
+  },
+  {
+    "id": "2",
+    "titulo": "Nossa história",
+    "texto": "Tudo começou como um pequeno projeto entre amigos que queriam aprender desenvolvimento web. Com o tempo, a ideia cresceu e se tornou uma plataforma completa."
+  },
+  {
+    "id": "3",
+    "titulo": "Nossa missão",
+    "texto": "Oferecer uma plataforma fácil de usar, com informações claras e atendimento de qualidade."
+  },
+  {
+    "id": "4",
+    "titulo": "Nossa visão",
+    "texto": "Ser referência em soluções digitais acessíveis, ajudando pessoas e empresas a crescerem com tecnologia."
+  },
+  {
+    "id": "5",
+    "titulo": "Nossos valores",
+    "texto": "Transparência, respeito ao usuário, aprendizado constante e trabalho em equipe."
+  },
+  {
+    "id": "6",
+    "titulo": "O que fazemos",
+    "texto": "Desenvolvemos sites, aplicações web e sistemas sob medida, sempre focando em desempenho, segurança e uma boa experiência para o usuário."
+  }
+]
 }
