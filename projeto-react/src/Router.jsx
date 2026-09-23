@@ -5,7 +5,7 @@ import NotFound from "./Pages/NotFound"
 import Nav from "./components/nav"
 import Faq from "./Pages/Faq"
 import Usuarios from "./Pages/Usuarios"
-
+import Cadastro from "./Pages/Cadastro"
 export default function Router() {
   return (
     <BrowserRouter>
@@ -15,6 +15,7 @@ export default function Router() {
             <Route path="/sobre" element={<Sobre/>}/>
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/usuarios" element={<Usuarios/>}/>
+            <Route path="/cadastro" element={<Cadastro/>}/>
             <Route path="*" element={<NotFound/>}/>
 
         </Routes>

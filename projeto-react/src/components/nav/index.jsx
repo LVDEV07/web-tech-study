@@ -26,6 +26,13 @@ export default function index() {
                         Usuarios
                     </Link>
                 </li>
+
+                <li>
+
+                    <Link to="/cadastro">
+                        Cadastro
+                    </Link>
+                </li>
             </ul>
         </nav>
     )
