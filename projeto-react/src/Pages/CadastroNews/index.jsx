@@ -1,21 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {toast, ToastContainer} from "react-toastify"
 import "../../../node_modules/react-toastify/dist/ReactToastify.css"
-import "./cadastro.css"
+import "./news.css"
 
 export default function index() {
-  //estado para armazenar os dados do formulario
-
   const [formData, setFormData] = useState({
     nome: "",
-    telefone: "",
     email: ""
   });
 
-  // função para atualizar o estado ao digitar no formulario
+  const [lista, setLista] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/news")
+      .then((response) => response.json())
+      .then((data) => {
+        setLista(data);
+      });
+  }, []);
 
   const handleChange = (e) => {
-    const { name, value } = e.target; // alvo
+    const { name, value } = e.target;
 
     setFormData((prevFormData) => ({
       ...prevFormData,
@@ -23,17 +28,16 @@ export default function index() {
     }));
   };
 
-  // função para enviar formulario
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(formData.nome === "" || formData.telefone === "" || formData.email === ""){
+    if(formData.nome === "" || formData.email === ""){
       toast.error("Preencha todos os campos")
       return false;
     }
 
 
-    fetch("http://localhost:3000/usuarios", {
+    fetch("http://localhost:3000/news", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -44,9 +48,9 @@ export default function index() {
         console.log("Usuário cadastrado com sucesso:", data);
 
         toast.success("Usuário cadastrado com sucesso")
+        setLista([...lista, data]);
         setFormData({
           nome: "",
-          telefone: "",
           email: ""
         });
       });
@@ -55,17 +59,12 @@ export default function index() {
 
   return (
     <main className='container'>
-      <h1>Cadastro de usuários</h1>
+      <h1>Cadastro News</h1>
       <form onSubmit={handleSubmit}>
 
         <article className='form-control'>
           <label htmlFor="nome">Nome</label>
           <input type="text" name='nome' value={formData.nome} onChange={handleChange} />
-        </article>
-
-        <article className='form-control'>
-          <label htmlFor="telefone">Telefone</label>
-          <input type="text" name='telefone' value={formData.telefone} onChange={handleChange} />
         </article>
 
         <article className='form-control'>
@@ -77,7 +76,13 @@ export default function index() {
 
         <ToastContainer />
       </form>
+
+      <h1>Cadastrados</h1>
+      {lista.map((item) => (
+        <article className='lista' key={item.id}>
+          <p>{item.nome} - {item.email}</p>
+        </article>
+      ))}
     </main>
   );
 }
-

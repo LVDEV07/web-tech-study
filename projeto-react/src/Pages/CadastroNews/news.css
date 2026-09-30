@@ -1,0 +1,13 @@
+.lista {
+  width: 300px;
+  margin: 0 auto 10px auto;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.lista p {
+  display: inline;
+}

@@ -86,5 +86,12 @@
       "texto": "Desenvolvemos sites, aplicações web e sistemas sob medida, sempre focando em desempenho, segurança e uma boa experiência para o usuário."
     }
   ],
+  "news": [
+    {
+      "nome": "Lucas",
+      "email": "lucas.fst.dev@gmail.com",
+      "id": "loWfvYNvzH4"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

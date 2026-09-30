@@ -33,6 +33,12 @@ export default function index() {
                         Cadastro
                     </Link>
                 </li>
+                <li>
+
+                    <Link to="/cadastroNews">
+                        Cadastro News
+                    </Link>
+                </li>
             </ul>
         </nav>
     )
