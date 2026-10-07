@@ -25,6 +25,8 @@ export default function index() {
         <section className='container usuarios'>
             <h2>Lista de users</h2>
 
+            
+
             {usuarios.map((user) => (
                 <article className='content-usuarios' key={user.id}>
                     <strong>
