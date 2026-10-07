@@ -1,12 +1,6 @@
 {
   "usuarios": [
     {
-      "nome": "João Silva",
-      "telefone": "11999990001",
-      "email": "João@gmail.com",
-      "id": "jhOo85F2qgU"
-    },
-    {
       "nome": "Caio",
       "telefone": "44444444",
       "email": "Caio@gmail.com",
