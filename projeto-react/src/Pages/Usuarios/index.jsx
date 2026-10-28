@@ -11,9 +11,21 @@ export default function index() {
         .then((response) => response.json())
             .then((data) => setUsuarios(data)).catch((error) => console.log(error))
     }, [])
+
+    const deleteUsuarios = (id) => {
+        fetch(`http://localhost:3000/usuarios/${id}`, {method: "DELETE"})
+        .then(() =>{
+            setUsuarios(usuarios.filter((usuario) => usuario.id !== id)  )
+        })
+        .catch((error) => console.error(error))
+    }
+
+
     return (
         <section className='container usuarios'>
             <h2>Lista de users</h2>
+
+            
 
             {usuarios.map((user) => (
                 <article className='content-usuarios' key={user.id}>
@@ -30,7 +42,9 @@ export default function index() {
                     </strong>
                     <br />
 
-                    <button className='delete'>Deletar</button>
+                    <button className='delete'
+                    onClick={()=> deleteUsuarios(user.id)}
+                    >Deletar</button>
                     <hr />
                 </article>
             ))}
