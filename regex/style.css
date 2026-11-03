@@ -1,0 +1,68 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    justify-items: center;
+}
+
+.container{
+    background-color: rgb(0, 122, 75);
+    min-height: 800px;
+    width: 600px;
+    padding: 20px;
+    margin-top: 40px;
+    color: white;
+}
+
+.conteudo{
+    margin: 30px;
+}
+
+.container-title{
+    text-align: center;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs label{
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.inputs input{
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+/* Estados do input */
+.inputs input.valido{
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+}
+
+.inputs input.invalido{
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+
+.mensagem{
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.mensagem.sucesso{
+    color: #b9f6ca;
+}
+
+.mensagem.erro{
+    color: #ffd0d0;
+}
