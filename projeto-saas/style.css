@@ -1,85 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-}
-
-.estilo-borda, .container .servicos .card {
-  border-radius: 10px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-.container header {
-  background: white;
-  padding: 20px;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #eef1f5;
+  color: #16263D;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.estilo-borda, .container .banner, .container .card {
+  border: 2px solid #16263D;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 #16263D;
+}
+
+header {
+  background-color: #16263D;
+  padding: 10px 20px;
+}
+header .logo {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
-.container header nav a {
-  color: #333;
-  text-decoration: none;
-  margin-left: 20px;
+header .logo img {
+  width: 80px;
+  height: 80px;
 }
-.container header nav a:hover {
-  color: #5936cf;
-  text-decoration: underline;
+header .logo h2 {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 36px;
+  color: #DB1C22;
 }
-.container .banner {
-  background: #f2f2f2;
-  padding: 60px 20px;
-  text-align: center;
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
 }
-.container .banner h1 {
-  color: #5936cf;
-}
-.container .banner .botao {
-  display: inline-block;
-  padding: 20px;
-  background: #5936cf;
+nav a {
+  font-family: "Black Ops One", system-ui;
   color: white;
   text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
   border-radius: 5px;
   transition: 0.2s all;
 }
+nav a:hover, nav a.ativo {
+  background-color: #DB1C22;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+.container .titulo-secao {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #16263D;
+  margin: 50px 0 25px;
+}
+.container .card {
+  background: white;
+  padding: 20px 24px;
+}
+.container .card h3 {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.container .card p {
+  color: #475569;
+  line-height: 1.5;
+}
+.container .card:hover {
+  border-color: #DB1C22;
+  box-shadow: 4px 4px 0 #DB1C22;
+}
+.container .banner {
+  background: #16263D;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+  margin-top: 40px;
+  box-shadow: 8px 8px 0 #DB1C22;
+}
+.container .banner h1 {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 44px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 #000;
+}
+.container .banner p {
+  margin: 15px 0 30px;
+  font-size: 18px;
+  color: #cbd5e1;
+}
+.container .banner .botao {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #DB1C22;
+  color: white;
+  font-family: "Black Ops One", system-ui;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 #000;
+  transition: 0.2s all;
+}
 .container .banner .botao:hover {
-  background: #3b1f96;
+  background: #b0161b;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
 }
-.container .servicos {
-  display: flex;
-  gap: 20px;
+.container .banner.banner-pagina {
   padding: 40px 20px;
+  margin-bottom: 40px;
 }
-.container .servicos .card {
-  background: #f2f2f2;
-  padding: 20px;
+.container .banner.banner-pagina h1 {
+  font-size: 36px;
+}
+.container .banner.banner-pagina p {
+  margin-bottom: 0;
+}
+.container .lista-carros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+.container .lista-carros .card-carro {
+  background: white;
+  border: 3px solid #16263D;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 #16263D;
+  overflow: hidden;
+  flex: 1 1 260px;
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s all;
+}
+.container .lista-carros .card-carro:hover {
+  transform: translateY(-5px);
+}
+.container .lista-carros .card-carro .imagem {
+  position: relative;
+  height: 180px;
+  background-color: #0d1726;
+  border-bottom: 3px solid #16263D;
+}
+.container .lista-carros .card-carro .imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.container .lista-carros .card-carro .imagem .marca {
+  position: absolute;
+  z-index: 2;
+  background-color: #DB1C22;
+  color: white;
+  font-family: "Black Ops One", system-ui;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  top: 10px;
+  left: 10px;
+  transform: skewX(-10deg);
+}
+.container .lista-carros .card-carro .imagem .ano {
+  position: absolute;
+  z-index: 2;
+  background-color: #ffcc00;
+  color: #000;
+  font-family: "Black Ops One", system-ui;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  bottom: 8px;
+  right: 10px;
+  transform: rotate(-3deg);
+}
+.container .lista-carros .card-carro .conteudo {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
-.container .servicos .card h3 {
-  color: #5936cf;
+.container .lista-carros .card-carro .conteudo h3 {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #e2e8f0;
 }
-.container .servicos .card:hover {
-  background: #e5e0fa;
+.container .lista-carros .card-carro .conteudo .modelo {
+  align-self: flex-start;
+  background-color: #eef1f5;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin: 4px 0 12px;
 }
-.container .servicos .card p {
-  line-height: 21px;
+.container .lista-carros .card-carro .conteudo .sub-infos {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
 }
-.container footer {
-  background-color: #5936cf;
+.container .lista-carros .card-carro .conteudo .sub-infos .info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #f8fafc;
+  border: 2px solid #16263D;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #16263D;
+  padding: 6px 4px;
+  font-weight: 700;
+  font-size: 12px;
+}
+.container .lista-carros .card-carro .conteudo .sub-infos .info img {
+  width: 14px;
+  height: 14px;
+}
+.container .lista-carros .card-carro .conteudo .bloco-valor {
+  margin-top: auto;
+  background-color: #16263D;
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #DB1C22;
+  padding: 8px 10px;
+  text-align: center;
+  transform: skewX(-4deg);
+}
+.container .lista-carros .card-carro .conteudo .bloco-valor span {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ffcc00;
+}
+.container .lista-carros .card-carro .conteudo .bloco-valor strong {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 22px;
   color: white;
-  padding: 20px;
+  text-shadow: 2px 2px 0 #000;
+}
+.container .sobre .cards, .container .numeros .cards {
+  display: flex;
+  gap: 20px;
+}
+.container .sobre .cards .card, .container .numeros .cards .card {
+  flex: 1;
+}
+.container .faq {
+  max-width: 760px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .numeros .card {
   text-align: center;
 }
+.container .numeros .card strong {
+  display: block;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 40px;
+  color: #DB1C22;
+  text-shadow: 2px 2px 0 #16263D;
+}
+
+footer {
+  background-color: #16263D;
+  font-family: "Black Ops One", system-ui;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #DB1C22;
+}
+footer p {
+  color: #ffcc00;
+  font-size: 14px;
+}
+
 @media (max-width: 600px) {
-  .container header {
+  header .logo h2 {
+    font-size: 26px;
+  }
+  .container .banner h1 {
+    font-size: 30px;
+  }
+  .container .banner.banner-pagina h1 {
+    font-size: 26px;
+  }
+  .container .sobre .cards,
+  .container .numeros .cards {
     flex-direction: column;
   }
-  .container header nav {
-    margin-top: 10px;
-  }
-  .container .servicos {
+  footer {
     flex-direction: column;
   }
 }
