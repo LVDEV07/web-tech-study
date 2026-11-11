@@ -1,0 +1,65 @@
+@use "./Abstracts/variable" as *;
+@use "./Abstracts/mixins" as *;
+
+.container-login {
+  @include centralizar;
+  background-color: #f5f5f5;
+  padding: 20px;
+
+  .login-card {
+    background-color: $white;
+    width: 100%;
+    max-width: $login-width;
+    padding: 40px;
+    border-radius: $card-radius;
+    border: 1px solid $border-color;
+
+    h1 {
+      text-align: center;
+      color: $primary-color;
+      font-size: 28px;
+      margin-bottom: 20px;
+
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: $text-color;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        outline: none;
+        box-sizing: border-box;
+
+        &:focus {
+          border-color: $primary-color;
+        }
+      }
+    }
+
+
+    button{
+      width: 100%;
+      padding: 10px;
+      background-color: $primary-color;
+      color: $white;
+      border-radius: $border-radius;
+      font-size: 16px;
+      cursor: pointer;
+  
+      &:hover {
+          background-color: $secondary-color;
+      }
+    }
+  }
+
+}
